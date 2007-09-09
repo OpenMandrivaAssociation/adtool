@@ -1,11 +1,7 @@
-%define name	adtool
-%define version 1.3
-%define release %mkrel 4
-
 Summary:	Active Directory administration utility for Unix
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		adtool
+Version:	1.3
+Release:	%mkrel 5
 License:	GPL
 Group:		File tools
 URL:		http://dexy.mine.nu/adtool/
@@ -49,5 +45,3 @@ mv %{buildroot}%{_sysconfdir}/adtool.cfg.dist %{buildroot}%{_sysconfdir}/adtool.
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/adtool.cfg
 %{_bindir}/adtool
 %{_mandir}/man1/adtool.1*
-
-
