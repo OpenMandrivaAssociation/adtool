@@ -1,7 +1,7 @@
 Summary:	Active Directory administration utility for Unix
 Name:		adtool
 Version:	1.3
-Release:	%mkrel 5
+Release:	%mkrel 6
 License:	GPL
 Group:		File tools
 URL:		http://dexy.mine.nu/adtool/
