@@ -10,7 +10,6 @@ BuildRequires:	gdbm-devel
 BuildRequires:	openldap-devel
 BuildRequires:	libsasl-devel
 BuildRequires:	openssl-devel
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 adtool is a unix command line utility for Active Directory
