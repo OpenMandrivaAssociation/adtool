@@ -1,16 +1,17 @@
 Summary:	Active Directory administration utility for Unix
 Name:		adtool
 Version:	1.3
-Release:	%mkrel 9
+Release:	%mkrel 10
 License:	GPL
 Group:		File tools
 URL:		http://dexy.mine.nu/adtool/
 Source0:	%{name}-%{version}.tar.bz2
+Patch0:		adtool-linkage_fix.diff
 BuildRequires:	gdbm-devel
 BuildRequires:	openldap-devel
 BuildRequires:	libsasl-devel
 BuildRequires:	openssl-devel
-BuildRoot:	%{_tmppath}/%{name}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 adtool is a unix command line utility for Active Directory
@@ -21,8 +22,13 @@ search capabilities.
 %prep
 
 %setup -q
+%patch0 -p0
+
+# lib64 fix
+perl -pi -e "s|/lib |/%{_lib} |g" configure*
 
 %build
+autoreconf -fis
 
 %configure2_5x \
     --with-ldap=%{_prefix}
@@ -30,14 +36,14 @@ search capabilities.
 %make
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %makeinstall
 
 mv %{buildroot}%{_sysconfdir}/adtool.cfg.dist %{buildroot}%{_sysconfdir}/adtool.cfg
 
 %clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
