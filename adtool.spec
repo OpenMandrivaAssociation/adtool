@@ -1,11 +1,11 @@
 Summary:	Active Directory administration utility for Unix
 Name:		adtool
-Version:	1.3
-Release:	%mkrel 10
-License:	GPL
+Version:	1.3.2
+Release:	%mkrel 1
+License:	GPLv2
 Group:		File tools
-URL:		http://dexy.mine.nu/adtool/
-Source0:	%{name}-%{version}.tar.bz2
+URL:		http://www.gp2x.org/adtool/
+Source0:	http://www.gp2x.org/adtool/%{name}-%{version}.tar.gz
 Patch0:		adtool-linkage_fix.diff
 BuildRequires:	gdbm-devel
 BuildRequires:	openldap-devel
