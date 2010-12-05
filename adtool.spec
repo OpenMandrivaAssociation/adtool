@@ -1,7 +1,7 @@
 Summary:	Active Directory administration utility for Unix
 Name:		adtool
 Version:	1.3.3
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2
 Group:		File tools
 URL:		http://www.gp2x.org/adtool/
