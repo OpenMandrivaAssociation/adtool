@@ -4,7 +4,7 @@ Version:	1.3.3
 Release:	3
 License:	GPLv2
 Group:		File tools
-URL:		http://www.gp2x.org/adtool/
+URL:		https://www.gp2x.org/adtool/
 Source0:	http://www.gp2x.org/adtool/%{name}-%{version}.tar.gz
 BuildRequires:	gdbm-devel
 BuildRequires:	openldap-devel
