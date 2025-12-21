@@ -6,6 +6,11 @@ License:	GPLv2
 Group:		File tools
 URL:		https://www.gp2x.org/adtool/
 Source0:	http://www.gp2x.org/adtool/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gdbm-devel
 BuildRequires:	openldap-devel
 BuildRequires:	sasl-devel
